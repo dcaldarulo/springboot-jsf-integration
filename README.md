@@ -28,9 +28,10 @@ mvn spring-boot:run
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
+## Contributor
+* **Massimo Romano** - https://www.javaboss.it/integrazione-jsf-spring-boot/ basic integration Contribute with is implementation
 ## Authors
-* **Massimo Romano** - https://www.javaboss.it/integrazione-jsf-spring-boot/ basic integration
-* **davidk96** - extension with @ViewScoped and adminFaces
+* **dcaldarulo** - extension with @ViewScoped and adminFaces
 
 ## License
 
