@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"    
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+	
+    <h:head>
+    	<title>Employee Service</title>
+    </h:head>
+    <h:body bgcolor="white">
+    	<h2>#{msg['message.hello']}</h2>
+    	<h:form id="employeeSerachForm">
+    	 	
+    	 	<h:panelGrid>
+    	 		<h:outputText value="#{msg['message.search']}"/>
+ 				<h:outputText value="Powered By http://www.javaboss.it"/>
+    	 	</h:panelGrid>
+    	 	
+    	 	<h:panelGrid columns="3">
+    	 		<h:outputText value="Nome"/>
+				<h:inputText value="#{employeeManagedBean.employeeName}"/>
+    	   		<h:commandButton value="Search" action="#{employeeManagedBean.search}"/>
+    	 	</h:panelGrid>
+   	 		
+   	 		<h:dataTable value="#{employeeManagedBean.result}" var="emp" rendered="#{not empty employeeManagedBean.result}">
+
+   				<h:column>
+   					<!-- column header -->
+   					<f:facet name="header">ID</f:facet>
+   					<!-- row record -->
+   					#{emp.id}
+   				</h:column>
+
+    			<h:column>
+    				<f:facet name="header">Name</f:facet>
+    				#{emp.name}
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">Surname</f:facet>
+    				#{emp.lastName}
+    			</h:column>
+
+    			<h:column>
+    				<f:facet name="header">Department</f:facet>
+    				#{emp.department}
+	    		</h:column>
+	    		
+	    		<h:column>
+    				<f:facet name="header">Email</f:facet>
+    				#{emp.email}
+	    		</h:column>
+
+    		</h:dataTable>
+    	</h:form>
+    </h:body>
+</html>
