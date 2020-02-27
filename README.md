@@ -5,8 +5,8 @@ With this simple project you'll be able to debug within any ide (eclipse/intelli
 
 ### Prerequisites
 
-Maven
-JDK
+*Maven
+*JDK
 
 ```
 For example Maven 3.6.3 and jdk 8
